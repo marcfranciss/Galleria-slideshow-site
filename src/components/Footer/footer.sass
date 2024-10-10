@@ -1,0 +1,42 @@
+@use "../../sass/_index" as *
+
+footer
+    background-color: $primary
+.footer-container
+    max-width: 1110px
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 2.5rem
+    padding-bottom: 43px
+    padding-inline: 1.5rem
+    @include breakpoint(tablet)
+        flex-direction: row
+        justify-content: space-between
+        padding-top: 36px
+        padding-bottom: 35px
+    @include breakpoint(desktop)
+        padding-inline: 0
+        margin-inline: auto
+
+    .nav-footer
+        display: flex
+        flex-direction: column
+        row-gap: 2rem
+        margin-top: 39px
+        margin-bottom: 3rem
+        a
+            color: $default
+            &:hover
+                transition: color 200ms ease-out
+                color: $orange
+        @include breakpoint(tablet)
+            flex-direction: row
+            column-gap: 2rem
+            margin-bottom: 0
+            margin-top: 0
+            margin-left: 2rem
+            margin-right: auto
+        @include breakpoint(desktop)
+            column-gap: 3rem
+            margin-left: 4rem

@@ -1,0 +1,98 @@
+@use "../../sass/_index" as *
+
+.navMobile-container
+    @include breakpoint(tablet)
+        display: none
+
+.btn-burger, .btn-close
+    all: unset
+    background: transparent
+    cursor: pointer
+    &:focus
+        outline: 2px solid hsla(0, 0%, 100%, 100%)
+
+dialog
+    transition: display 800ms allow-discrete, overlay 800ms allow-discrete
+    animation: close 800ms forwards, slideUp 400ms forwards
+    background-color: hsla(229, 31%, 21%, 95%)
+    outline: none
+    border: none
+    top: 0
+    left: 0
+    min-height: 100vh
+    min-width: 100vw
+    padding-bottom: 3rem
+    &[open]
+        animation: slideDown 800ms forwards, open 400ms forwards
+.nav-dialog
+    background-color: hsla(229, 31%, 21%, 95%)
+    .dialog-container
+        width: 100%
+        min-height: 100vh
+        display: flex
+        flex-direction: column
+        position: relative
+        header
+            position: relative
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            margin-top: 2.5rem
+            padding-inline: 2rem
+            .logo-container
+                img
+                    filter: invert(98%) sepia(2%) saturate(458%) hue-rotate(181deg) brightness(115%) contrast(100%)
+        .nav-links
+            position: relative
+            padding-inline: 1.5rem
+            display: flex
+            flex-direction: column
+            margin-top: 3rem
+            height: 100%
+            li
+                padding-top: 25px
+                padding-bottom: 24px
+                border-top: 1px solid hsla(0, 0%, 100%, 15%)
+                display: flex
+                justify-content: center
+                &:last-child
+                    border-bottom: 1px solid hsla(0, 0%, 100%, 15%)
+                    margin-bottom: 1.5rem
+                a
+                    text-decoration: none
+                    color: hsl(0, 0%, 100%)
+                    text-transform: uppercase
+                    font-size: 1.5rem
+                    line-height: 25px
+                    font-weight: 300
+                    &:hover, &:active, &:focus
+                        transition: font-weight 200ms ease-out
+                        font-weight: 400
+
+@keyframes slideDown
+    from
+        transform: translateY(-50%)
+        opacity: 0
+    to
+        transform: translateY(0%)
+        opacity: 1
+
+@keyframes slideUp
+    from
+        transform: translateY(0)
+        opacity: 0
+    to
+        transform: translateY(-100%)
+        opacity: 1
+
+@keyframes open
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+@keyframes close
+    from
+        opacity: 1
+    to
+        opacity: 0

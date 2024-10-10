@@ -1,0 +1,66 @@
+
+@font-face
+    font-family: "Libre Baskerville"
+    src: url("/src/assets/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format(truetype)
+
+#root
+    font-family: "Libre Baskerville", serif
+    font-optical-sizing: auto
+    font-style: normal
+
+.heading-l
+    font-weight: 500
+    font-size: clamp(1.875rem, 1.4789rem + 1.6901vw, 3rem)
+    line-height: clamp(2.5rem, 2.2359rem + 1.1268vw, 3.25rem)
+    letter-spacing: clamp(-0.005625rem, -0.0043rem + -0.0056vw, -0.009375rem)
+
+.heading-m
+    font-size: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem)
+    font-weight: 500
+    line-height: 52px
+    letter-spacing: clamp(-0.005rem, -0.0046rem + -0.0019vw, -0.00625rem)
+
+@mixin heading-m
+    font-size: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem)
+    font-weight: 500
+    line-height: 52px
+    letter-spacing: clamp(-0.005rem, -0.0046rem + -0.0019vw, -0.00625rem)
+
+.heading-s
+    font-size: 20px
+    font-weight: 500
+    line-height: 1.5rem
+    letter-spacing: 0.25px
+
+@mixin heading-s
+    font-size: 20px
+    font-weight: 500
+    line-height: 1.5rem
+    letter-spacing: 0.25px
+
+.text-body
+    font-size: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem)
+    font-weight: 400
+    line-height: clamp(1.5625rem, 1.4965rem + 0.2817vw, 1.75rem)
+
+@mixin text-body
+    font-size: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem)
+    font-weight: 400
+    line-height: clamp(1.5625rem, 1.4965rem + 0.2817vw, 1.75rem)
+
+.text-links
+    font-size: 20px
+    font-weight: 500
+    line-height: 17px
+    letter-spacing: 2.31px
+    @media (min-width: 48rem)
+        font-size: 13px
+        letter-spacing: 1.5px
+@mixin text-links
+    font-size: 20px
+    font-weight: 500
+    line-height: 17px
+    letter-spacing: 2.31px
+    @media (min-width: 48rem)
+        font-size: 13px
+        letter-spacing: 1.5px
