@@ -7,10 +7,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@assets/*": ["src/assets/*"],
-      "@images/*": ["src/assets/images/*"],
-      "@components/*": ["src/components/*"],
+      "@/*": ["src/*"]
     },
     "moduleResolution": "node",
   }
