@@ -4,21 +4,43 @@ header
     width: 100%
     position: relative
     .header-container
-        width: 100%
-        max-width: 1110px
+        margin-inline: auto
         display: flex
         flex-direction: row
         justify-content: space-between
         align-items: center
-        padding-top: 2.5rem
-        padding-inline: 2rem
-        position: absolute
-        top: 0
-        left: 50%
-        transform: translateX(-50%)
-        z-index: 2
+        padding-block: 1.5rem
+        padding-inline: 1.5rem
+        border-bottom: 1px solid $accent
+        margin-bottom: 1.5rem
         @include breakpoint(tablet)
-            padding-top: 3rem
+            padding-block: 1.75rem
+            padding-inline: 2.5rem
+            margin-bottom: 2.5rem
         @include breakpoint(desktop)
-            padding-left: 6px
-            padding-right: 0
+            margin-bottom: 100px
+            max-width: 1360px
+            padding-block: 2.5rem
+
+.slideshow-nav
+    button
+        border: none
+        outline: none
+        background: transparent
+        cursor: pointer
+        font-size: clamp(0.5625rem, 0.4965rem + 0.2817vw, 0.75rem)
+        font-weight: bold
+        letter-spacing: clamp(0.120625rem, 0.1065rem + 0.0601vw, 0.160625rem)
+        transition: color 200ms ease-in
+        color: $secondary
+        &:hover
+            transition: color 200ms ease-out
+            color: $primary
+        &:disabled
+            animation: animate 800ms ease infinite
+
+@keyframes animate
+    from
+        opacity: 0%
+    to
+        opacity: 100%

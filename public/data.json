@@ -188,24 +188,6 @@
       "gallery": "src/assets/images/the-night-cafe/gallery.jpg"
     },
     "height": "260"
-  },{
-    "name": "placeholder only",
-    "year": 1888,
-    "description": "placeholder only",
-    "source": "placeholder only",
-    "artist": {
-      "image": "placeholder only",
-      "name": "placeholder only"
-    },
-    "images": {
-      "thumbnail": "placeholder only",
-      "hero": {
-        "small": "placeholder only",
-        "large": "splaceholder only"
-      },
-      "gallery": "placeholder only"
-    },
-    "height": "0"
   },
   {
     "name": "The Basket of Apples",

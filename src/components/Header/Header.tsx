@@ -1,17 +1,13 @@
 import "./header.sass";
 import { Logo } from "./Logo";
-import { NavBar } from "./NavBar";
-import { NavBarMobile } from "./NavBarMobile";
+import { SlideShowNav } from "./SlideShowNav";
 
 export const Header = () => {
   return (
     <header>
       <div className='header-container'>
-        <Logo fillColor='blue' />
-        <div className='nav-header__container'>
-          <NavBar id='nav-main' className='nav-main' />
-        </div>
-        <NavBarMobile />
+        <Logo />
+        <SlideShowNav className='slideshow-nav' />
       </div>
     </header>
   );

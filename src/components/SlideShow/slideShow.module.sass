@@ -1,0 +1,133 @@
+@use "../../sass/_index" as *
+
+.container
+    max-width: 1360px
+    height: 100%
+    margin-inline: auto
+    padding-inline: 1.5rem
+    margin-bottom: 123px
+    @include breakpoint(tablet)
+        padding-inline: 2.5rem
+        margin-bottom: 63px
+    @include breakpoint(desktop)
+        padding-inline: 0
+        margin-bottom: 75px
+
+.slider_container
+    display: none
+    flex-direction: column
+    @include breakpoint(desktop)
+        flex-direction: row
+.isIndex
+    display: flex
+
+.slider_image__container
+    flex: 1
+    display: flex
+    position: relative
+    min-height: 402px
+.slider_image
+    width: 100%
+    height: 280px
+    @include breakpoint(tablet)
+        width: 475px
+        height: 560px
+        margin-bottom: 2rem
+
+.slider_image__details
+    position: absolute
+    bottom: -20px
+    left: 0
+    @include flex(column, null, null)
+    @include breakpoint(tablet)
+        height: 100%
+        bottom: 0
+        right: 0
+    @include breakpoint(desktop)
+        justify-content: space-between
+
+    .image_details
+        @include flex(column, center, start)
+        width: 280px
+        // height: 104px
+        padding: 1.5rem
+        gap: 0.5rem
+        background-color: $default
+        @include breakpoint(tablet)
+            width: 445px
+            // height: 238px
+            padding: 0
+            padding-left: 65px
+            padding-bottom: 67px
+            align-self: flex-end
+            justify-content: start
+            gap: 1.5rem
+        dt
+            font-size: clamp(1.5rem, -0.4084rem + 8.1425vw, 3.5rem)
+            font-weight: 700
+            line-height: clamp(1.8125rem, -0.2748rem + 8.9059vw, 4rem)
+            max-width: 8ch
+        dd
+            font-size: 15px
+            color: $secondary
+    img
+        --size: min(4rem, 48rem)
+        width: var(--size)
+        height: var(--size)
+        @include breakpoint(tablet)
+            --size: min(8rem, 68rem)
+            align-self: end
+
+.slider_text__container
+    flex: 1
+    position: relative
+    display: flex
+    h2
+        position: absolute
+        right: 0
+        font-size: clamp(6.25rem, 0.2863rem + 25.4453vw, 12.5rem)
+        font-weight: 700
+        line-height: clamp(6.25rem, 3.2681rem + 12.7226vw, 9.375rem)
+        color: hsla(0, 0%, 95%, 100%)
+        @include breakpoint(tablet)
+            left: 0
+            right: auto
+        @include breakpoint(desktop)
+            right: 0
+            left: auto
+.slider_text
+    @include flex(column, null, null)
+    padding-top: 74px
+    gap: 2.5rem
+    @include breakpoint(tablet)
+        max-width: 457px
+        margin-inline: auto
+    @include breakpoint(desktop)
+        max-width: 350px
+        padding-top: 115px
+        margin-right: 125px
+        gap: 5rem
+    p
+        font-size: 14px
+        line-height: 28px
+        font-weight: 700
+        color: $secondary
+        z-index: 2
+    a
+        font-size: 9px
+        font-weight: 700
+        letter-spacing: 1.93px
+        text-transform: uppercase
+        color: $secondary
+
+label
+    display: block
+    font-size: 1px
+    max-width: 1360px
+    margin-inline: auto
+progress
+    width: 100%
+    font-size: 1px
+    line-height: 1px
+    fill: $primary
+    accent-color: $primary

@@ -1,0 +1,29 @@
+@use "../../sass/_index" as *
+
+footer
+    max-width: 1360px
+    margin-inline: auto
+.footer_container
+    @include flex(row, space-between, center)
+    padding-block: 1rem
+    padding-inline: 1.5rem
+
+    @include breakpoint(tablet)
+        padding-block: 1.5rem
+        padding-inline: 2.5rem
+
+.art_details
+    flex-direction: column
+    gap: 0.5rem
+    dt
+        font-size: clamp(0.875rem, 0.6365rem + 1.0178vw, 1.125rem)
+        font-weight: bold
+    dd
+        font-size: clamp(0.625rem, 0.4461rem + 0.7634vw, 0.8125rem)
+        font-weight: 400
+.footer_nav__buttons
+    @include flex(row, center, center)
+    gap: 23.24px
+
+    @include breakpoint(tablet)
+        gap: 40.36px
