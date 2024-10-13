@@ -24,6 +24,20 @@ footer
 .footer_nav__buttons
     @include flex(row, center, center)
     gap: 23.24px
-
     @include breakpoint(tablet)
         gap: 40.36px
+    button
+        outline: none
+        border: none
+        background: transparent
+        cursor: pointer
+        &:hover > svg g
+            stroke: hsla(0, 0%, 66%, 100%)
+
+        &:not(:disabled):active
+            transform: scale(0.95)
+        &:disabled
+            cursor: default
+            > svg g
+                stroke: hsla(0, 0%, 66%, 15%)
+                cursor: default

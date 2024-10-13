@@ -1,6 +1,6 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useStateContext } from "../../contexts/StateContext";
-import { bool } from "prop-types";
+import { ShowSlideButton } from "../Utils/Buttons/ShowSlideButton";
 
 interface ISlideShowNav {
   className: string;
@@ -18,12 +18,12 @@ export const SlideShowNav = ({ className }: ISlideShowNav) => {
   };
   return (
     <div className={className}>
-      <button
+      <ShowSlideButton
         onClick={handleSlideShowButton}
         disabled={disableBtn}
-        aria-controls='display-frame'>
-        {slider ? "STOP" : "START"} SLIDESHOW
-      </button>
+        ariaControls='display-frame'
+        sliderState={slider}
+      />
     </div>
   );
 };
